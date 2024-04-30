@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>かうんた</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>かうんた</h1>
+        <div class="counter">
+            <button id="increment-btn">+</button>
+            <div id="counter-value">0</div>
+            <button id="decrement-btn">-</button>
+        </div>
+        <button id="reset">Reset</button>
+    </div>
+    <script src="counter.js"></script>
+    <script>
+        // Add event listener for space key press
+        document.addEventListener('keydown', function (event) {
+            if (event.key === ' ') { // Check if space key is pressed
+                counter++; // Increment the counter
+                counterValue.textContent = counter; // Update the display
+            }
+            if (event.key === 'Backspace'){
+                counter--;
+                counterValue.textContent = counter;
+            }
+				if (event.key === 'PageDown') { // Check if space key is pressed
+                counter++; // Increment the counter
+                counterValue.textContent = counter; // Update the display
+            }
+            if (event.key === 'PageUp'){
+                counter--;
+                counterValue.textContent = counter;
+            }
+				
+        });
+    </script>
+</body>
+</html>
